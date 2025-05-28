@@ -151,7 +151,7 @@
     .mainCard:nth-of-type(odd):before {
         content: '';
         position: absolute;
-        background: url('/src/assets/imgs/cooperator/狮子.png');
+        background: url('/src/assets/imgs/cooperator/狮子.webp');
         aspect-ratio: 1/1;
         width: 25%;
         left: -18%;
@@ -167,7 +167,7 @@
     .mainCard:nth-of-type(4n-2):before {
         content: '';
         position: absolute;
-        background: url('/src/assets/imgs/cooperator/大鹅.png');
+        background: url('/src/assets/imgs/cooperator/大鹅.webp');
         aspect-ratio: 1/1;
         width: 25%;
         right: -14%;
@@ -182,7 +182,7 @@
     .mainCard:nth-of-type(4n):before {
         content: '';
         position: absolute;
-        background: url('/src/assets/imgs/cooperator/熊猫.png');
+        background: url('/src/assets/imgs/cooperator/熊猫.webp');
         aspect-ratio: 1/1;
         width: 25%;
         right: -12%;
