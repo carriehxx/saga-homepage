@@ -74,20 +74,22 @@
                 <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/>
                 </svg>
             </button>
-            <div class="quantityCount" 
-                    :class="{ active: selectedGifts.has(gift.id) && selectedGifts.get(gift.id) > 0}" 
-                    v-show="activeView === 'selection'">
-                <button @click="removeFromCart(gift)">
-                    <svg class="minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/>
-                    </svg>
-                </button>
-                <p class="count">{{ selectedGifts.get(gift.id) }}</p>
-                <button @click="addToCart(gift)">
-                    <svg class="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/>
-                    </svg>
-                </button>
+            <div class="quantityCountContainer"
+                :class="{ active: selectedGifts.has(gift.id) && selectedGifts.get(gift.id) > 0}" 
+                v-show="activeView === 'selection'">
+                <div class="quantityCount" >
+                    <button @click="removeFromCart(gift)">
+                        <svg class="minus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path d="M432 256c0 17.7-14.3 32-32 32L48 288c-17.7 0-32-14.3-32-32s14.3-32 32-32l352 0c17.7 0 32 14.3 32 32z"/>
+                        </svg>
+                    </button>
+                    <p class="count">{{ selectedGifts.get(gift.id) }}</p>
+                    <button @click="addToCart(gift)">
+                        <svg class="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                        <path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
             <div class="summary"
                 v-show="activeView === 'submit'">
@@ -377,7 +379,7 @@ function cancelOrder() {
     color: rgb(0, 0, 0);
 }
 
-.addItem, .quantityCount, .summary {
+.addItem, .quantityCountContainer, .summary {
     grid-area: addItem;
 }
 
@@ -402,24 +404,38 @@ function cancelOrder() {
     fill: aliceblue;
 }
 
-.quantityCount {
+.quantityCountContainer {
     display: none;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
+    height: 100%;
     padding: 0 5px;
 }
 
-.quantityCount.active {
+.quantityCount {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: 1.5rem;
+    /* padding: 0 5px; */
+    gap: 7px;
+    border-radius: 10px;
+    background: #ffa963;
+}
+
+.quantityCountContainer.active {
     display: flex;
 }
 
 .quantityCount button {
-    width: 1.2rem;
+    height: inherit;
     aspect-ratio: 1/1;
     background: rgb(255, 204, 110);
-    border-radius: 50%;
+    border-radius: 10px;
     border: none;
     display: flex;
     justify-content: center;
@@ -447,7 +463,7 @@ function cancelOrder() {
 .summary p {
     font-size: 1.2rem;
     color: aliceblue;
-    background: var(--clr-primary);
+    background: rgb(255, 197, 90);
     padding: 5px;
     border-radius: 5px ;
 }
