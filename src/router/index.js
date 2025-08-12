@@ -12,8 +12,8 @@ const routes = [
   {
     path: "/appreciation/volunteers",
     name: "VolunteersApplicationPage",
-    component: () => import("@/views/VolunteerApplicationFinished.vue"),
-    // path had been updated for the finished application page
+    component: () => import("@/views/VolunteersApplicationPage.vue"),
+    // path had been updated for the application page
   },
   {
     path: "/appreciation/volunteers/upload-writing-task",

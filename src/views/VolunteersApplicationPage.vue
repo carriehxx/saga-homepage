@@ -87,7 +87,7 @@
             name="title"
             tag="h1"
             align="left"
-            content="SAGA 星光 · 第五期 | 志愿者招募邀请"
+            content="SAGA 星光 · 第六期 | 志愿者招募邀请"
             top="1"
           />
           <StaticElement
@@ -102,7 +102,7 @@
           <StaticElement
             name="info__text1"
             tag="p"
-            content="本次志愿者招募的 <strong style='font-weight: bold;'>截止日期为: 2024年XX月XX日 23:59分</strong>, 招募为滚动制, 招募完成的部门会停止接受新的申请. "
+            content="本次志愿者招募的 <strong style='font-weight: bold;'>截止日期为: 2025年09月05日 23:59分</strong>, 招募为滚动制, 招募完成的部门会停止接受新的申请. "
           />
           <StaticElement
             name="info__text2"
@@ -565,7 +565,7 @@
           <StaticElement
             name="ending_text1"
             tag="p"
-            content="恭喜你, 你已经完成了 SAGA星光第五期 的招募问卷! "
+            content="恭喜你, 你已经完成了 SAGA星光第六期 的招募问卷! "
           />
           <StaticElement
             name="ending_text2"

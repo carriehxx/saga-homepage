@@ -85,7 +85,7 @@
             :rules="['nullable', 'url']"
             placeholder="eg. http(s)://www.example.com"
             :floating="false"
-            info="请上传腾讯会议或哔哩哔哩的视频链接"
+            info="请上传腾讯会议或哔哩哔哩的视频链接，请开放查看权限"
             label="视频链接"
             description=" 请保留链接前的 http(s):// 前缀"
             :conditions="[['handle_by', 'in', ['TUT', 'CM', 'PR']]]"
