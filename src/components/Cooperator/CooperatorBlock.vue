@@ -1,7 +1,7 @@
 <template>
     <div class="mainCard">
       <div class="partnerImg">
-        <img :src="cooperator.logo" alt="partner logo" class="partnerlogo">
+        <img :src="getImageUrl(cooperator.logo)" alt="partner logo" class="partnerlogo">
       </div>
       <div class="partnerIntro">
         <h1 class="className">{{ cooperator.className }}</h1>
@@ -19,6 +19,15 @@
         required: true
         }
     });
+
+    const getImageUrl = (path) => {
+      try {
+        return new URL(`../../assets/imgs/cooperator/${path}`, import.meta.url).href;
+      } catch (error) {
+        console.error('Error loading image:', error);
+        return '';
+      }
+    };
     
   </script>
 

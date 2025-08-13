@@ -205,7 +205,7 @@ function shrink(id){
     content: 'S\A    A\A G\A    A';
     white-space: pre;
     position: absolute;
-    font-family: "Bagel Fat One", system-ui;
+    font-family: var(--ff-bagel), system-ui;
     font-weight: 400;
     font-style: normal;
     font-size: 300px;
